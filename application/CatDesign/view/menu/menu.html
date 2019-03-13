@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu/菜单</title>
+</head>
+<script src="/static/assets/js/jquery-1.11.1.min.js"></script>
+<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/static/css/owl.carousel.css" type="text/css" media="all">
+<link rel="stylesheet" href="/static/assets/css/amazeui.min.css" type="text/css" media="all">
+<script src="/static/assets/js/bootstrap.js"></script>
+<script src="/static/assets/js/jquery.min.js"></script>
+<style type="text/css">
+body{
+	box-shadow: 2px 4px 5px #949494;
+	width: 1300px;
+	height:1990px;
+	margin:10px auto;
+	border-top: 0.5px solid #FFFFFF;
+/* 圆角设置 */
+    -moz-border-radius: 15px; 
+    -webkit-border-radius: 15px; 
+    border-radius:10px;  
+}
+.box{width: 1280px;
+	margin: 10px auto;
+	height: 1900px;	
+}
+.header {
+	position: relative;
+    padding: 2em 0;
+    background: #FFF;
+    box-shadow: 0 2px 3px #e4e4e4;
+}
+.logo {
+    position: absolute;
+    top: 23%;
+    left: 41.5%;
+}
+.logo  h1{
+	margin:0;
+}
+.logo h1 a {
+    display: block;
+    font-size: 1.1em;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.top-nav {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.top-nav ul {
+	margin: 0;
+    padding: 0;
+}
+.top-nav ul li{
+	list-style-type:none;
+	display: inline-block;
+	margin: 0 2em;
+}	
+.top-nav ul li:nth-child(3) {
+    margin-right: 31em;
+}
+.top-nav li a {
+    color: #333;
+    font-size: 1em;
+    padding: 0;
+    font-weight: 600;
+    text-decoration: none;
+}
+.top-nav li a:hover ,.top-nav li a.active{
+    color: #f35041;
+}
+
+.cleft{width: 755px;
+ 	height: 1350px;
+ 	float: left;
+ 	margin-left:50px;
+	border-left: 1px solid rgb(221, 221, 221);
+	border-right: 1px solid rgb(221, 221, 221);
+	border-bottom:1px solid rgb(221, 221, 221);
+	box-shadow:2px 3px 3px #949494;
+	border-radius:10px; 
+}
+.cltitle{float: left;
+    width: 753px;
+	height: 40px;
+    margin-bottom: 10px;
+    font-family: 新宋体;
+    background: rgb(243, 243, 243);
+    border-top: 1px solid rgb(221, 221, 221);
+    border-bottom:  1px solid rgb(221, 221, 221);
+    border-radius:10px; 
+	}
+.cltitle a{display: block;
+	color: #000000;
+    float: left;
+    border-right: 1px solid #ddd;
+    line-height: 40px;
+    height: 40px;
+    padding: 0px 13px;
+    text-decoration: none;
+    border-radius:10px; }
+.cltitle a:hover{background: #FF4A4A;
+ 	color: #FFFFFF; 
+ 	}
+.item{width: 240px;
+    float: left;
+    border: 1px solid #FFFFFF;
+	margin-left: 10px;
+}
+.Borders{margin: 10px;
+	width: 218px;
+	border-bottom: 1px solid #ccc;}
+.item img{margin-bottom: 8px;}
+.Price{text-align: center;}
+.Price b{font-size: 22px;
+    color: #FF4A4A;
+}
+.Price span{color: #999999;
+    padding: 0px 5px;
+	font-size: 13px;
+	margin-left:10px;
+}
+.name{
+    line-height: 18px;
+    font-family: 新宋体;
+	text-align: center;}
+.name a{color: #333;
+		font-size: 12px;}
+.name a:hover{color: #EE9A00;}
+.crightTop {
+	margin-right: 60px;
+	width: 260px;
+	height: 850px;
+	float: right;
+	border-left: 1px solid rgb(221, 221, 221);
+	border-right: 1px solid rgb(221, 221, 221);
+	border-bottom:1px solid rgb(221, 221, 221);
+	box-shadow:2px 3px 3px #949494;
+	border-radius:10px; 
+
+}
+.crightTop a{text-decoration: none;}
+.crightTop a:hover{color: #f35041;}
+
+.crightBut{
+	margin-top: 30px;
+	margin-right: 60px;
+	width: 400px;
+	height: 470px;
+	float: right;
+	border-left: 1px solid rgb(221, 221, 221);
+	border-right: 1px solid rgb(221, 221, 221);
+	border-bottom:1px solid rgb(221, 221, 221);
+	box-shadow:2px 3px 3px #949494;
+	border-radius:10px; 
+}
+
+.title_name2{
+	height: 40px;
+	width: 258px;
+	background-color:rgb(243, 243, 243);
+	line-height: 40px;
+	color:#000000;
+	font-size: 18px;
+	padding: 0px 10px;
+    border-top: 1px solid rgb(221, 221, 221);
+    border-bottom:  1px solid rgb(221, 221, 221);
+    border-radius:10px;}
+.p_name{text-align: center;
+		font-size: 18px;
+		margin-top: -8px;
+	}
+</style>
+<body>
+<div class="box">
+<!-- 头部 -->
+	<div class="banner" style=" height: 200px;">
+		<div class="header">
+			<div class="logo">
+				<h1><a href="#">Cake Corner</a></h1>
+			</div>
+			<div class="top-nav">
+				<ul>
+				<li><a href="/CatDesign/index/index">Home/主页</a></li>					
+				<li><a class="active" href="/CatDesign/menu/menu">Menu/菜单</a></li>
+				<li><a href="/CatDesign/car/car">Car/购物车</a></li>
+				<li><a href="/CatDesign/com/com">Comment/留言</a></li>
+				<li><a href="/CatDesign/login/login">Login/登录</a></li>
+				</ul>
+			</div>
+		</div>
+			<div class="about-heading">
+				<h2 style="color: #ffffff;">Menu/菜单</h2>
+			</div>
+	</div>
+<!-- 头部 -->
+
+<!-- 菜单 -->
+<div class="big" style="height: 1380px;width: 1280px;">
+	<div class="cleft">
+		<div class="cltitle">
+			<a href="#">综合</a>
+			<a href="#" >价格</a>
+			<a href="#">销量</a>
+			<a href="#">新品</a>
+		</div>
+		<div style="list-style: none;">
+				<li class="item" style="height: 320px;">
+					<div class="Borders">
+						<div class="img"><a href="/CatDesign/detail/detail"><img src="/static/images/s1.jpg" style="width:220px;height:220px"></a></div>
+						<div class="name"><a href="">蛋糕的名字</a></div>
+						<div class="Price" ><b> ¥138.00</b></div>
+					</div>
+				</li>
+				<li class="item" style="height: 320px;">
+					<div class="Borders">
+						<div class="img"><a href=""><img src="/static/images/s2.jpg" style="width:220px;height:220px"></a></div>
+						<div class="name"><a href="">蛋糕的名字</a></div>
+						<div class="Price" ><b> ¥138.00</b></div>
+					</div>
+				</li>
+				<li class="item" style="height: 320px;">
+					<div class="Borders">
+						<div class="img"><a href=""><img src="/static/images/s3.jpg" style="width:220px;height:220px"></a></div>
+						<div class="name"><a href="">蛋糕的名字</a></div>
+						<div class="Price" ><b> ¥138.00</b></div>
+					</div>
+				</li>
+				<li class="item" style="height: 320px;">
+					<div class="Borders">
+						<div class="img"><a href=""><img src="/static/images/s4.jpg" style="width:220px;height:220px"></a></div>
+						<div class="name"><a href="">蛋糕的名字</a></div>
+						<div class="Price" ><b> ¥138.00</b></div>
+					</div>
+				</li>
+				<li class="item" style="height: 320px;">
+					<div class="Borders">
+						<div class="img"><a href=""><img src="/static/images/s5.jpg" style="width:220px;height:220px"></a></div>
+						<div class="name"><a href="">蛋糕的名字</a></div>
+						<div class="Price" ><b> ¥138.00</b></div>
+					</div>
+				</li>
+				<li class="item" style="height: 320px;">
+					<div class="Borders">
+						<div class="img"><a href=""><img src="/static/images/s6.jpg" style="width:220px;height:220px"></a></div>
+						<div class="name"><a href="">蛋糕的名字</a></div>
+						<div class="Price" ><b> ¥138.00</b></div>
+					</div>
+				</li>
+				<li class="item" style="height: 320px;">
+					<div class="Borders">
+						<div class="img"><a href=""><img src="/static/images/s7.jpg" style="width:220px;height:220px"></a></div>
+						<div class="name"><a href="">蛋糕的名字</a></div>
+						<div class="Price" ><b> ¥138.00</b></div>
+					</div>
+				</li>
+				<li class="item" style="height: 320px;">
+					<div class="Borders">
+						<div class="img"><a href=""><img src="/static/images/s1.jpg" style="width:220px;height:220px"></a></div>
+						<div class="name"><a href="">蛋糕的名字</a></div>
+						<div class="Price" ><b> ¥138.00</b></div>
+					</div>
+				</li>
+				<li class="item" style="height: 320px;">
+					<div class="Borders">
+						<div class="img"><a href=""><img src="/static/images/s2.jpg" style="width:220px;height:220px"></a></div>
+						<div class="name"><a href="">蛋糕的名字</a></div>
+						<div class="Price" ><b> ¥138.00</b></div>
+					</div>
+				</li>
+				<li class="item" style="height: 320px;">
+					<div class="Borders">
+						<div class="img"><a href=""><img src="/static/images/s3.jpg" style="width:220px;height:220px"></a></div>
+						<div class="name"><a href="">蛋糕的名字</a></div>
+						<div class="Price" ><b> ¥138.00</b></div>
+					</div>
+				</li>
+				<li class="item" style="height: 320px;">
+					<div class="Borders">
+						<div class="img"><a href=""><img src="/static/images/s4.jpg" style="width:220px;height:220px"></a></div>
+						<div class="name"><a href="">蛋糕的名字</a></div>
+						<div class="Price" ><b> ¥138.00</b></div>
+					</div>
+				</li>
+				<li class="item" style="height: 320px;">
+					<div class="Borders">
+						<div class="img"><a href=""><img src="/static/images/s5.jpg" style="width:220px;height:220px"></a></div>
+						<div class="name"><a href="">蛋糕的名字</a></div>
+						<div class="Price" ><b> ¥138.00</b></div>
+					</div>
+				</li>				
+		</div>
+	</div>
+	<div class="cp" style="width: 135px;height: 850px;float: left;margin-left: 11px;background: url(/static/images/cake.jpg) ">
+	</div>
+	<div class="crightTop">
+			<div class="title_name2"><em></em>销量排行/Sales ranking</div>
+			<div style="list-style:none;width: 250px;height: 260px;border-bottom :1px solid #949494;margin-top: 5px;">
+				<li>
+					<p><img src="/static/images/sp1.jpg" style="width: 200px;height: 200px;margin-top: 10px;margin-left: 23px;"></p >
+					<a href="#">
+						<p class="p_name">产品名字</p >
+					</a>
+				</li>
+			</div>
+
+			<div style="list-style:none;width: 250px;height: 260px;border-bottom:1px solid #949494;margin-top: 5px;">
+				<li>
+					<p><img src="/static/images/sp2.jpg" style="width: 200px;height: 200px;margin-top: 10px;margin-left: 23px;"></p >
+					<a href="#">
+						<p class="p_name">产品名字</p >
+					</a>
+				</li>
+			</div>
+
+			<div style="list-style:none;width: 250px;height: 260px;border-bottom:1px solid #949494;margin-top: 5px;">
+				<li>
+					<p><img src="/static/images/sp3.jpg" style="width: 200px;height: 200px;margin-top: 10px;margin-left: 23px;"></p >
+					<a href="#">
+						<p class="p_name">产品名字</p >
+					</a>
+				</li>
+			</div>
+
+	</div>
+	<div class="crightBut">
+
+	</div>
+</div>
+<!-- 菜单 -->
+
+<!-- 底部 -->
+<div class="footer" style="height: 305px; margin-top: 0px;">
+		<div class="container" style="margin-left: 100px;">
+			<div class="agile-footer-grids">
+				<div class="col-md-3 agile-footer-grid">
+					<h4>关于我们</h4>
+					<p>根据欧美成熟的O2O经营模式，积极调整经营方向，采用直营连锁和特许加盟的发展模式推出“Cake Corner”进行市场扩展。其经营模式打破了传统的品牌、加盟体系和网站经营模式，使中国零食网成为了中国O2O零食专业网站。</span></p>
+				</div>
+				<div class="col-md-3 agile-footer-grid">
+					<h4>联系我们</h4>
+					<ul class="w3agile_footer_grid_list">
+						<li>客服热线：400-400-0404
+						<li>客服邮箱：patpon@126.com</span></li>
+						<li>产品招商合作</li>
+						<li>Email: 296261640@qq.com</li>
+					</ul>
+				</div>
+				<div class="col-md-3 agile-footer-grid" style="margin-left: -70px;">
+					<h4>火爆产品</h4>
+					<div class="popular-grids">
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s1.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s2.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s3.jpg" alt="" /></a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="popular-grids">
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s4.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s5.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s6.jpg" alt="" /></a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+
+				<div class="col-md-3 agile-footer-grid">
+					<h4>给我们的建议</h4>
+					<p>如果您有宝贵的意见可以给我提供</p>
+
+					<form action="#" method="post">
+						<input type="text" name="text" placeholder="" required="" style="width: 200px;">
+						<input type="submit" value="提交" style="margin-top: 10px;">
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="agileits-copyright">
+		<div class="container">
+			<p>Copyright © 1995-2019 Cat Corporation, All Rights Reserved</p>
+			<p> 版权所有</p>
+		</div>
+	</div>
+<!-- 底部 -->
+</div>	
+</body>
+</html>

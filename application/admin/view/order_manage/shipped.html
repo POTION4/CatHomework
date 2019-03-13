@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link rel="stylesheet" type="text/css" href="/static/h-ui/css/think-page.css" />
+<link rel="stylesheet" type="text/css" href="/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/lib/fontawesome-free-5.5.0-web/css/all.css" />
+
+<title>资讯列表</title>
+</head>
+<body>
+<nav class="breadcrumb">
+	<i class="Hui-iconfont">&#xe67f;</i> 首页 
+	<span class="c-gray en">&gt;</span> 订单管理 
+	<span class="c-gray en">&gt;</span> 已发货订单管理 
+	<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+	<div class="text-c"> 
+		<input type="text" class="input-text" style="width:300px" placeholder="输入订单姓名、电话、地址" id="wenben" name="wenben">
+		<buttontype="submit" class="btn btn-success" id="sousuo"><i class="Hui-iconfont">&#xe665;</i> 搜订单</button>
+	</div>
+
+	 <div class="cl pd-5 bg-1 bk-gray mt-20"> 
+	<span class="r">共有数据：<strong>{$count}</strong> 条</span> </div>
+	<div class="mt-20">
+		<table class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
+			<thead>
+				<tr class="text-c">
+					<th width="6%">订单ID</th>
+					<th width="7%">买家姓名</th>
+					<th width="10%">联系方式</th>
+					<th width="17%">地址</th>
+					<th width="24%">商品</th>
+					<th width="4%">单价</th>
+					<th width="4%">数量</th>
+					<th width="8%">下单时间</th>
+					<th width="8%">发货时间</th>
+					<th width="6%">发货状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				{foreach $result as $val}
+				<tr class="text-c">
+					<td>{$val['id']}</td>
+					<td>{$val['name']}</td>
+					<td>{$val['tell']}</td>
+					<td>{$val['address']}</td>
+					
+					<td colspan="3">
+						<table style="margin: 0px;">
+						{foreach $val['content'] as $v}
+						
+						<tr >
+							<td style="border: 0px;border-bottom: 1px solid #ddd;text-align: left;width: 290px;">
+								<img src="{$v['img']}" style="width: 80px;height: 80px;margin-right: 10px;float: left;"><span style="float: left; width: 180px;">{$v['product_name']}</span></td>
+							<td style="border: 0px;border-bottom: 1px solid #ddd;">{$v['count']}</td>
+							<td style="border: 0px;border-bottom: 1px solid #ddd;">{$v['price']}</td>
+						</tr>
+						
+						{/foreach}
+						</table>
+					</td>
+
+
+					<td>
+					{eq name="val.payment" value="0"}
+						<i class="fab fa-alipay" style="color: #108ee9;font-size: 30px;"></i>
+						<br/>
+						{else/}
+						<div style="background: #108ee9;; color: #FFF;width: 58px;height: 25px;text-align: center;line-height: 25px;margin: 8px auto;border-radius:5px;font-size: 12px;">货到付款</div>
+						{/eq}
+					{$val['ordertime']}
+				</td>
+					<td>{$val['deliverytime']}</td>
+					{eq name="val.condition" value="2"}
+						<td class="td-fa1"><span class="label label-danger radius">配送中</span></td>
+					{else/}
+						<td class="td-fa1"><span class="label label-success radius">已送达</span></td>
+					{/eq}
+					
+					
+				</tr>
+				{/foreach}
+			</tbody>
+		</table>
+		<div class="pagination" style="float: right; margin-right:70px; margin-top: 20px;">
+        	{$list->render()}
+    	</div>
+	</div>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
+<script type="text/javascript" src="/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+$(function()
+{
+	$("#sousuo").click(function(){
+		var wenben=$("#wenben").val();
+		window.location.href="/admin/order_manage/shipped?wenben="+wenben;
+	});
+})
+
+/*资讯-添加*/
+function article_add(title,url,w,h){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+/*资讯-编辑*/
+function article_edit(title,url,id,w,h){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+/*资讯-删除*/
+function article_del(obj,id){
+	layer.confirm('确认要删除吗？',function(index){
+		$.ajax({
+			type: 'POST',
+			url: '',
+			dataType: 'json',
+			success: function(data){
+				$(obj).parents("tr").remove();
+				layer.msg('已删除!',{icon:1,time:1000});
+			},
+			error:function(data) {
+				console.log(data.msg);
+			},
+		});		
+	});
+}
+
+function shipped_fa(obj,id){
+	layer.confirm('确认送货吗？',function(index){
+		
+		$(obj).parents("tr").find(".td-fa2").prepend('');
+		$(obj).parents("tr").find(".td-fa1").html('<span class="label label-danger radius">送货中</span>');
+		$(obj).remove();
+		layer.msg('货物发出!',{icon: 6,time:1000});
+	});
+}
+</script> 
+</body>
+</html>

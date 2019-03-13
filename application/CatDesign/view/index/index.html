@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index/主页</title>
+</head>
+<script src="/static/assets/js/jquery-1.11.1.min.js"></script>
+<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/static/css/owl.carousel.css" type="text/css" media="all">
+<link rel="stylesheet" href="/static/assets/css/amazeui.min.css" type="text/css" media="all">
+<script src="/static/assets/js/bootstrap.js"></script>
+<script src="/static/assets/js/jquery.min.js"></script>
+<style type="text/css">
+body{
+	box-shadow: 2px 4px 5px #949494;
+	width: 1300px;
+	height:2375px;
+	margin:10px auto;
+	border-top: 0.5px solid #FFFFFF;
+/* 圆角设置 */
+    -moz-border-radius: 15px; 
+    -webkit-border-radius: 15px; 
+    border-radius:10px;  
+}
+.box{width: 1280px;
+	margin: 10px auto;
+	height: 800px;	
+}
+.header {
+	position: relative;
+    padding: 2em 0;
+    background: #FFF;
+    box-shadow: 0 2px 3px #e4e4e4;
+}
+.logo {
+    position: absolute;
+    top: 23%;
+    left: 41.5%;
+}
+.logo  h1{
+	margin:0;
+}
+.logo h1 a {
+    display: block;
+    font-size: 1.1em;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.top-nav {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+span.menu {
+	display: none;
+}
+.top-nav ul {
+	margin: 0;
+    padding: 0;
+}
+.top-nav ul li{
+	list-style-type:none;
+	display: inline-block;
+	margin: 0 2em;
+}	
+.top-nav ul li:nth-child(3) {
+    margin-right: 31em;
+}
+.top-nav li a {
+    color: #333;
+    font-size: 1em;
+    padding: 0;
+    font-weight: 600;
+    text-decoration: none;
+}
+.top-nav li a:hover ,.top-nav li a.active{
+    color: #f35041;
+}
+.am-slider-carousel li {
+  margin-right: 5px;
+}
+#div1{margin:auto;
+	border: 1px solid #fff;
+	width: 600px;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	}
+#div2{width: 400%;
+	height: 300px;
+	}
+#div2 img{float: left;}	
+</style>
+<body>
+<div class="box">
+	<div class="banner" style=" height: 700px;">
+	<div class="header">
+		<div class="logo">
+			<h1><a href="index.html">Cake Corner</a></h1>
+		</div>
+		<div class="top-nav">
+			<span class="menu"><img src="/static/images/menu.png" alt=""/></span>
+				<ul>
+				<li><a class="active" href="/CatDesign/index/index">Home/主页</a></li>					
+				<li><a href="/CatDesign/menu/menu">Menu/菜单</a></li>
+				<li><a href="/CatDesign/car/car">Car/购物车</a></li>
+				<li><a href="/CatDesign/com/com">Comment/留言</a></li>
+				<li><a href="/CatDesign/login/login">Login/登录</a></li>
+				</ul>
+			<!-- script-for-menu -->
+<!-- 			<script>					
+	$("span.menu").click(function(){
+		$(".top-nav ul").slideToggle("slow" , function(){
+		});
+	});
+</script> -->
+			<!-- script-for-menu -->
+		</div>
+	</div>
+<!-- 滑动栏-->
+		<div class="banner-slider">
+			<div class="container">
+				<div class="slider">
+					<div class="callbacks_container">
+						<ul class="rslides" id="slider4">
+							<li>
+								<div class="banner-info">
+									<h3>Lorem ipsum dolor sit amet</h3>
+									<p>Donec tellus metus, ornare et mollis ut, maximus id nisi. Quisque scelerisque accumsan sem nec ullamcorper. Cras sed purus eget augue egestas commodo. Sed erat magna, pharetra aliquet mattis mollis, maximus eget lacus. </p>
+									<a href="/CatDesign/menu/menu">Menu</a>
+								</div>
+							</li>
+							<li>
+								<div class="banner-info">
+									<h3>Fusce egestas purus in nulla</h3>
+									<p>Sed erat magna, pharetra aliquet mattis mollis, maximus eget lacus. Donec tellus metus, ornare et mollis ut, maximus id nisi. Quisque scelerisque accumsan sem nec ullamcorper. Cras sed purus eget augue egestas commodo. </p>
+									<a href="/CatDesign/menu/menu">Menu</a>
+								</div>
+							</li>
+							<li>
+								<div class="banner-info">
+									<h3>Duis faucibus dolor risus</h3>
+									<p>Quisque scelerisque accumsan sem nec ullamcorper. Donec tellus metus, ornare et mollis ut, maximus id nisi. Cras sed purus eget augue egestas commodo. Sed erat magna, pharetra aliquet mattis mollis, maximus eget lacus. </p>
+									<a href="/CatDesign/menu/menu">Menu</a>
+								</div>
+							</li>
+							<li>
+								<div class="banner-info">
+									<h3>Lorem ipsum dolor sit amet</h3>
+									<p>Donec tellus metus, ornare et mollis ut, maximus id nisi. Quisque scelerisque accumsan sem nec ullamcorper. Cras sed purus eget augue egestas commodo. Sed erat magna, pharetra aliquet mattis mollis, maximus eget lacus. </p>
+									<a href="/CatDesign/menu/menu">Menu</a>
+								</div>
+							</li>
+							<li>
+								<div class="banner-info">
+									<h3>Fusce egestas purus in nulla</h3>
+									<p>Sed erat magna, pharetra aliquet mattis mollis, maximus eget lacus. Donec tellus metus, ornare et mollis ut, maximus id nisi. Quisque scelerisque accumsan sem nec ullamcorper. Cras sed purus eget augue egestas commodo. </p>
+									<a href="/CatDesign/menu/menu">Menu</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<script src="/static/assets/js/responsiveslides.min.js"></script>
+					<script>
+						// You can also use "$(window).load(function() {"
+						$(function () {
+						  // Slideshow 4
+						  $("#slider4").responsiveSlides({
+							auto: true,
+							pager:true,
+							nav:false,
+							speed: 500,
+							namespace: "callbacks",
+							before: function () {
+							  $('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+							  $('.events').append("<li>after event fired.</li>");
+							}
+						  });
+					
+						});
+					 </script>
+					<!--banner Slider starts Here-->
+				</div>
+			</div>
+		</div>
+<!-- 滑动栏 -->
+	</div>
+<!-- 头部 -->
+
+<!-- 每日推荐 -->
+	<div class="special" style="  margin-top: -50px;">
+		<div class="container">
+			<div class="services-info">
+				<p>Today Specials<p>
+				<h3>/今日推荐</h3>
+				<p>Pellentesque ultrices tincidunt risus in pellentesque. Morbi facilisis consectetur nunc in luctus.</p>
+			</div>
+			<div class="special-grids" style=" margin-top: 10px;">
+				<div class="col-md-6 w3l-special-grid">
+					<div class="col-md-6 w3ls-special-img">
+						<div class="wpf-demo-6">
+							<div class="w3ls-special-text">
+								<p><sub>$</sub>125</p>
+							</div>
+							<figcaption class="view-caption">
+								<h4>Lorem ipsum dolor sit amet</h4> 
+								<a href="menu.html">Menu</a>
+							</figcaption>
+						</div>
+					</div>
+					<div class="col-md-6 agileits-special-info">
+						<h4>Aliquam</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 w3l-special-grid">
+					<div class="col-md-6 w3ls-special-img wthree-img">
+						<div class="wpf-demo-6">
+							<div class="w3ls-special-text">
+								<p><sub>$</sub>130</p>
+							</div>
+							<figcaption class="view-caption">
+								<h4>Lorem ipsum dolor sit amet</h4> 
+								<a href="menu.html">Menu</a>
+							</figcaption>
+						</div>
+					</div>
+					<div class="col-md-6 agileits-special-info">
+						<h4>Nullam</h4>
+						<p>Maecenas ac hendrerit purus. Lorem ipsum dolor sit amet</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 w3l-special-grid">
+					<div class="col-md-6 agileits-special-info">
+						<h4>Aliquam</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+					</div>
+					<div class="col-md-6 w3ls-special-img wthree-img2">
+						<div class="wpf-demo-6">
+							<div class="w3ls-special-text">
+								<p><sub>$</sub>190</p>
+							</div>
+							<figcaption class="view-caption">
+								<h4>Lorem ipsum dolor sit amet</h4> 
+								<a href="menu.html">Menu</a>
+							</figcaption>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 w3l-special-grid">
+					<div class="col-md-6 agileits-special-info">
+						<h4>Nullam</h4>
+						<p>Maecenas ac hendrerit purus. Lorem ipsum dolor sit amet</p>
+					</div>
+					<div class="col-md-6 w3ls-special-img wthree-img3">
+						<div class="wpf-demo-6">
+							<div class="w3ls-special-text">
+								<p><sub>$</sub>105</p>
+							</div>
+							<figcaption class="view-caption">
+								<h4>Lorem ipsum dolor sit amet</h4> 
+								<a href="menu.html">Menu</a>
+							</figcaption>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- 每日推荐 -->
+<!-- 轮播图 -->
+<div class="services" style="margin-top:-60px;">
+		<div class="container" style="margin-top:-45px;">
+			<div class="services-info" >
+				<p>Popular products</p><h3>/人气产品</h3>
+				<p>Pellentesque ultrices tincidunt risus in pellentesque. Morbi facilisis consectetur nunc in luctus.</p>
+			</div>
+		</div>
+			<div id="div1" style="margin-top:25px;">
+				<div id="div2">
+					<img src="/static/images/1.jpg" style="width: 600px;height:300px;"/>
+					<img src="/static/images/5.jpg" style="width: 600px;height:300px;"/>
+					<img src="/static/images/7.jpg" style="width: 600px;height:300px;"/>
+					<img src="/static/images/9.jpg" style="width: 600px;height:300px;"/>
+				</div>
+			</div>	
+
+	</div>
+<script type="text/javascript">
+var mLeft = 0;
+function move(){
+	mLeft = mLeft +600;
+	$('#div2').animate({
+		'margin-left':'-' + mLeft + 'px'
+	},1000,function(){
+
+	});
+	if(mLeft>1200){
+		$('#div2').animate({
+		'margin-left': '0px'
+		},0,);
+		mLeft = 0;	
+	}
+}
+
+setInterval(function(){
+	move();
+},3000)
+
+
+</script>
+<!-- 轮播图 -->
+<!-- 底部 -->
+	<div class="footer" style="height: 305px; margin-top: -5px;">
+		<div class="container" style="margin-left: 100px;">
+			<div class="agile-footer-grids">
+				<div class="col-md-3 agile-footer-grid">
+					<h4>关于我们</h4>
+					<p>根据欧美成熟的O2O经营模式，积极调整经营方向，采用直营连锁和特许加盟的发展模式推出“Cake Corner”进行市场扩展。其经营模式打破了传统的品牌、加盟体系和网站经营模式，使中国零食网成为了中国O2O零食专业网站。</span></p>
+				</div>
+				<div class="col-md-3 agile-footer-grid">
+					<h4>联系我们</h4>
+					<ul class="w3agile_footer_grid_list">
+						<li>客服热线：400-400-0404
+						<li>客服邮箱：patpon@126.com</span></li>
+						<li>产品招商合作</li>
+						<li>Email: 296261640@qq.com</li>
+					</ul>
+				</div>
+				<div class="col-md-3 agile-footer-grid" style="margin-left: -70px;">
+					<h4>火爆产品</h4>
+					<div class="popular-grids">
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s1.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s2.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s3.jpg" alt="" /></a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="popular-grids">
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s4.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s5.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s6.jpg" alt="" /></a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+
+				<div class="col-md-3 agile-footer-grid">
+					<h4>给我们的建议</h4>
+					<p>如果您有宝贵的意见可以给我提供</p>
+
+					<form action="#" method="post">
+						<input type="text" name="text" placeholder="" required="" style="width: 200px;">
+						<input type="submit" value="提交" style="margin-top: 10px;">
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="agileits-copyright">
+		<div class="container">
+			<p>Copyright © 1995-2019 Cat Corporation, All Rights Reserved</p>
+			<p> 版权所有</p>
+		</div>
+	</div>
+	<script src="js/owl.carousel.js"></script>  
+<!-- 底部 -->
+</div>	
+</body>
+</html>

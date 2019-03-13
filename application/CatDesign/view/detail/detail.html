@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Detail/详情页</title>
+</head>
+<script src="/static/assets/js/jquery-1.11.1.min.js"></script>
+<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/static/css/owl.carousel.css" type="text/css" media="all">
+<link rel="stylesheet" href="/static/assets/css/amazeui.min.css" type="text/css" media="all">
+<script src="/static/assets/js/bootstrap.js"></script>
+<script src="/static/assets/js/jquery.min.js"></script>
+<style type="text/css">
+body{
+	box-shadow: 2px 4px 5px #949494;
+	width: 1300px;
+	height:1990px;
+	margin:10px auto;
+	border-top: 0.5px solid #FFFFFF;
+/* 圆角设置 */
+    -moz-border-radius: 15px; 
+    -webkit-border-radius: 15px; 
+    border-radius:10px;  
+}
+.box{width: 1280px;
+	margin: 10px auto;
+	height: 1900px;	
+}
+.header {
+	position: relative;
+    padding: 2em 0;
+    background: #FFF;
+    box-shadow: 0 2px 3px #e4e4e4;
+}
+.logo {
+    position: absolute;
+    top: 23%;
+    left: 41.5%;
+}
+.logo  h1{
+	margin:0;
+}
+.logo h1 a {
+    display: block;
+    font-size: 1.1em;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.xqy{width: 1100px;
+	height: 500px;
+	margin: 0 auto;
+	border-left: 1px solid rgb(221, 221, 221);
+	border-right: 1px solid rgb(221, 221, 221);
+	border-bottom:1px solid rgb(221, 221, 221);
+	box-shadow:2px 3px 3px #949494;
+	border-radius:10px; 
+	}
+.xqy-l{	margin-top: 20px;
+		width: 480px;
+		height: 480px;
+		border-right:1px dashed #d7d7d7;
+		border-bottom:1px solid #d7d7d7;
+		float: left;
+	}
+.xqy-r{	width: 500px;
+		height: 500px;
+		margin-right: 50px;
+		margin-top: 20px;
+		float: right;
+	}
+.xqy-r h2{
+	font-size: 18px;
+    font-weight: bold;
+    height: 34px;
+    line-height: 34px;
+    overflow: hidden;
+    color: #666;
+}
+.goods_info{
+    font-size: 14px;
+    line-height: 22px;
+    overflow: hidden;
+    color: red;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d7d7d7;
+}
+.ProductD {
+    padding-left: 18px;
+    position: relative;
+    padding: 10px 0;
+    height: 200px;
+}
+.ProductD .productDL {
+    width: 565px;
+    float: left;
+    position: relative;
+    margin-bottom: 35px;
+}
+.ProductD .productDL dl {
+    height: 25px;
+    line-height: 25px;
+    color: #666666;
+    clear: both;
+}
+.ProductD .productDL dl dt {
+    width: 68px;
+    float: left;
+    font-family: 新宋体;
+    font-size: 10px;
+}
+.ProductD .productDL dl dd {
+    width: 355px;
+    font-size: 12px;
+}
+.ProductD .productDL dl dd span {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 5px 0 0;
+    color: #e4393c;
+    line-height: 0.1px;
+}
+.ProductD .productDL dl dd del {
+    color: #999999;
+    font-size: 12px;
+}
+.buyinfo {
+    height: 135px;
+    width: 500px;
+    margin-top: -10px;
+}
+.buyinfo dl {
+    height: 66px;
+}
+.buyinfo dl dt {
+    width: 50px;
+    line-height: 50px;
+    float: left;
+    color: #666666;
+    font-size: 14px;
+}
+.buyinfo dl dd {
+    height: 66px;
+    float: left;
+}
+.buyinfo dl dd .wrap_btn input {
+    width: 100px;
+    height: 40px;
+    display: block;
+    float: left;
+    background-color: #ff0036;
+    border: none;
+    font-size: 16px;
+    color: white;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.P_Quantity {
+    float: left;
+    padding: 0px 10px;
+    color: #999999;
+    line-height: 55px;
+    font-size: 10px;
+}
+.choose-amount {
+    width: 56px;
+    height: 34px;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    position: relative;
+    margin: 0px 10px 0px 0px;
+}
+.choose-amount a {
+    display: block;
+    width: 15px;
+    text-align: center;
+    height: 17px;
+    line-height: 17px;
+    overflow: hidden;
+    background: #F1F1F1;
+    color: #666;
+    position: absolute;
+    right: -1px;
+    border: 1px solid #CCC;
+}
+.choose-amount input {
+    display: block;
+    width: 40px;
+    height: 30px;
+    line-height: 32px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    border: none;
+    border: 0;
+    text-align: center;
+}
+.pic{width: 402px;
+	height: 402px;
+	margin: 18px auto;
+	border:1px solid #CCC;	
+	}
+.pic img{width: 400px;
+	height: 400px;}	
+.pic-d{width: 450px;
+		height: 50px;
+		border: 1px solid red;
+		margin: -10px auto;
+		}
+/*分割*/
+</style>
+<body>
+<div class="box">
+<!-- 头部 -->
+	<div class="banner" style=" height: 200px;">
+		<div class="header">
+			<div class="logo">
+				<h1><a href="#">Cake Corner</a></h1>
+			</div>
+			<div class="top-nav">
+				<ul>
+				<li><a href="/CatDesign/index/index">Home/主页</a></li>					
+				<li><a href="/CatDesign/menu/menu">Menu/菜单</a></li>
+				<li><a href="/CatDesign/car/car">Car/购物车</a></li>
+				<li><a href="/CatDesign/com/com">Comment/留言</a></li>
+				<li><a href="/CatDesign/login/login">Login/登录</a></li>
+				</ul>
+			</div>
+		</div>
+			<div class="about-heading">
+				<h2 style="color: #ffffff;">详情页</h2>
+			</div>
+	</div>
+<!-- 头部 -->
+
+<!-- 详情页 -->
+<div class="xqy">
+	<div class="xqy-l" >
+		<div class="pic">
+			<img src="/static/images/s1.jpg" alt="" >
+		</div>
+		<div class="pic-d">
+			
+		</div>
+	</div>
+	<div class="xqy-r">
+		<form name="" id="" method="">
+		       <h2 id="pr_name">唐妖果蔬干秋葵即食蔬菜干脆片孕妇香菇脱水什锦儿童零食综混合装</h2>
+		       <div class="goods_info" id="describe">3种疏果脆 蔬菜干 水果干 蔬果脆</div>
+		       <div class="ProductD ">
+			        <div class="productDL">       
+				        <dl>
+				        	<dt>售&nbsp;&nbsp;价：</dt>
+				        	<dd>
+				        		<span name="price"><i>￥</i><span id="price">29.00</span></span>
+				        		<del>市场价：￥76.00</del>
+				    		</dd>
+				    	</dl>
+				        <dl>
+				        	<dt>总 重 量：</dt>
+				        	<dd>360克</dd>
+				        </dl>
+				        <dl>
+				        	<dt>上架时间：</dt>
+				        	<dd>2019-01-02 10:51:36</dd>
+				        </dl>
+				        <dl>
+				        	<dt>产&nbsp;&nbsp;地：</dt>
+				        	<dd>中国大陆</dd>
+				        </dl>
+				        <dl>
+				        	<dt>储存方式：</dt>
+				        	<dd>通风干燥保存</dd>
+				        </dl>
+				        <dl>
+				        	<dt>保 质 期：</dt>
+				        	<dd>300</dd>
+				        </dl>
+			       	</div>
+		      	</div>
+		     	<div class="buyinfo" id="detail_buyinfo">
+					<dl>
+				        <dt>数量</dt>
+				        <dd>
+							<div class="choose-amount left">
+								<a class="goods_add" href="ajvascript:;" onclick="goods_add();">+</a><br>
+								<a class="goods_cut" href="javascript:;" onclick="goods_cut();">-</a>
+								<input name="number" type="text" id="number" value="1" size="4">		
+							</div>
+						</dd>
+						<dd>
+							<div class="P_Quantity">剩余：84460件</div>
+						</dd>      
+					  	<dd>
+					    	<div class="wrap_btn" style="position: relative;">
+					    		<input type="submit" name="" value="加入购物车" class="wrap_btn1">
+					    		<a style="width: 150px;height: 48;border:1px solid red;display: block; position: absolute;font-size: 28px;opacity: 0;" href="javascript:;" onclick="jiaru(this,36);">asda</a>
+					    		<!-- <a onclick="doSubmit(this);">jiaur</a> -->
+					    		<input type="button" name="" value="立即购买" class="wrap_btn2">
+					    		<a style="width: 150px;height: 48;border:1px solid red;display: block; position: absolute;font-size: 28px;right: 0px;opacity: 0;" href="javascript:;" onclick="tijiao(this,36)" ;="">da</a>
+							</div>
+						</dd>
+				  	</dl>
+			  	</div>
+		     </form>
+	</div>
+</div>			
+<!-- 详情页 -->
+
+<!-- 底部 -->
+<div class="footer" style="height: 305px; margin-top: 0px;">
+		<div class="container" style="margin-left: 100px;">
+			<div class="agile-footer-grids">
+				<div class="col-md-3 agile-footer-grid">
+					<h4>关于我们</h4>
+					<p>根据欧美成熟的O2O经营模式，积极调整经营方向，采用直营连锁和特许加盟的发展模式推出“Cake Corner”进行市场扩展。其经营模式打破了传统的品牌、加盟体系和网站经营模式，使中国零食网成为了中国O2O零食专业网站。</span></p>
+				</div>
+				<div class="col-md-3 agile-footer-grid">
+					<h4>联系我们</h4>
+					<ul class="w3agile_footer_grid_list">
+						<li>客服热线：400-400-0404
+						<li>客服邮箱：patpon@126.com</span></li>
+						<li>产品招商合作</li>
+						<li>Email: 296261640@qq.com</li>
+					</ul>
+				</div>
+				<div class="col-md-3 agile-footer-grid" style="margin-left: -70px;">
+					<h4>火爆产品</h4>
+					<div class="popular-grids">
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s1.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s2.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s3.jpg" alt="" /></a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="popular-grids">
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s4.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s5.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s6.jpg" alt="" /></a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+
+				<div class="col-md-3 agile-footer-grid">
+					<h4>给我们的建议</h4>
+					<p>如果您有宝贵的意见可以给我提供</p>
+
+					<form action="#" method="post">
+						<input type="text" name="text" placeholder="" required="" style="width: 200px;">
+						<input type="submit" value="提交" style="margin-top: 10px;">
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="agileits-copyright">
+		<div class="container">
+			<p>Copyright © 1995-2019 Cat Corporation, All Rights Reserved</p>
+			<p> 版权所有</p>
+		</div>
+	</div>
+<!-- 底部 -->
+</div>	
+</body>
+</html>

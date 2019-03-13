@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car/购物车</title>
+</head>
+<script src="/static/assets/js/jquery-1.11.1.min.js"></script>
+<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/static/css/owl.carousel.css" type="text/css" media="all">
+<link rel="stylesheet" href="/static/assets/css/amazeui.min.css" type="text/css" media="all">
+<script src="/static/assets/js/bootstrap.js"></script>
+<script src="/static/assets/js/jquery.min.js"></script>
+<style type="text/css">
+body{
+	box-shadow: 2px 4px 5px #949494;
+	width: 1300px;
+
+	margin:10px auto;
+	border-top: 0.5px solid #FFFFFF;
+/* 圆角设置 */
+    -moz-border-radius: 15px; 
+    -webkit-border-radius: 15px; 
+    border-radius:10px;  
+}
+.box{width: 1280px;
+	margin: 10px auto;
+	
+}
+.header {
+	position: relative;
+    padding: 2em 0;
+    background: #FFF;
+    box-shadow: 0 2px 3px #e4e4e4;
+}
+.logo {
+    position: absolute;
+    top: 23%;
+    left: 41.5%;
+}
+.logo  h1{
+	margin:0;
+}
+.logo h1 a {
+    display: block;
+    font-size: 1.1em;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.me{width: 900px;
+	height: 420px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	border-left: 1px solid rgb(221, 221, 221);
+	border-right: 1px solid rgb(221, 221, 221);
+	border-bottom:1px solid rgb(221, 221, 221);
+	box-shadow:2px 3px 3px #949494;
+	border-radius:10px;
+	}
+.meleft{width: 200px;
+		height: 410px;
+		margin: 5px ;
+		float: left;
+		border: 2px solid #ededed;}
+.meleftTitle{width: 197px;
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+			font-size: 18px;
+			font-weight: 400;
+			color:#4e4a4a;
+			background: #ededed;}
+.kuang{width: 198px;
+		height: 155px;
+		border-bottom: 1px solid #000;}
+.pphoto{width: 90px;
+		height: 90px;
+		margin: 10px auto;
+		}
+.name{color: red;}
+.user_name{width: 200px;
+		height: 70px;
+		font-size:15px;
+		line-height: 15px;
+		text-align: center;
+		color: #666;}
+.nc{font-size: 16px;
+	color: #666;
+	margin-right: 10px;}
+.sj{font-size: 12px;}
+.icon{ background: url(/static/images/m_i_1.png)  no-repeat;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    top: 5px;}
+.meleftTitle2{  margin: 0;
+    padding: 0 0 0 45px;
+    width: 199px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #ededed;
+    font-size: 14px;
+    border-bottom: 1px #ddd solid;
+    position: relative;
+    cursor: pointer;}
+  .daolan a{height: 45px;
+    line-height: 45px;
+    padding-left: 30px;
+    background: url(../images/liselected.gif) no-repeat scroll 25px center;
+    font-size: 15px;
+    display: block;
+    color: #666}
+ .meright{width: 620px;
+ 	height: 410px;
+ 		float: right;}
+.info_content{width: 620px;
+			height:40px; }
+.title_Section span {
+    border-bottom: 3px solid #F30;
+    padding: 7px 10px;
+}
+.title_Section {
+    border-bottom: 1px solid #ddd;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+}
+.xinxi {
+    width: 500px;
+    margin-top: 30px;
+    float: left;
+}
+.xinxi li {
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    margin-bottom: 10px;
+    margin-left: -20px;
+    font-size: 14px;
+    border-bottom: 1px dashed #ddd;
+}
+.xinxi li .text {
+    height: 30px;
+    padding: 3px;
+    background-color: #FFF;
+    border: 0px;
+}
+.xinxi li span {
+
+    width: 300px;
+    height: 40px;
+    padding: 0px 10px;
+}
+.cartMain{
+	width: 900px;
+
+	margin: 0 auto;
+	border-left: 1px solid rgb(221, 221, 221);
+	border-right: 1px solid rgb(221, 221, 221);
+	border-bottom:1px solid rgb(221, 221, 221);
+	box-shadow:2px 3px 3px #949494;
+	border-radius:10px;
+}
+.cartMain_hd {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #3c3c3c;
+}
+.cartMain_hd ul{
+	list-style: none;
+}
+.cartMain_hd li{
+	width: 140px;
+	float: left;
+}
+.cartBox ul{
+	list-style: none;
+}
+.cartBox li{	
+	width: 140px;
+	float: left;
+	line-height: 80px;
+}
+.order_content{width: 900px;border-top: 1px solid #F60;height: 200px;border-bottom: 1px solid #F60; }
+.bar{width: 900px;height: 50px; margin-top: 10px;}
+.bar ul{width: 500px;height: 50px;float: right;}
+.bar ul li{
+	list-style: none;
+	float: left;
+	margin-left: 80px;
+	margin-top: 10px;
+}
+/*分割*/
+</style>
+<body>
+<div class="box">
+<!-- 头部 -->
+	<div class="banner" style=" height: 200px;">
+		<div class="header">
+			<div class="logo">
+				<h1><a href="#">Cake Corner</a></h1>
+			</div>
+			<div class="top-nav">
+				<ul>
+				<li><a href="/CatDesign/index/index">Home/主页</a></li>					
+				<li><a href="/CatDesign/menu/menu">Menu/菜单</a></li>
+				<li><a class="active" href="/CatDesign/car/car">Car/购物车</a></li>
+				<li><a href="/CatDesign/com/com">Comment/留言</a></li>
+				<li><a href="/CatDesign/login/login">Login/登录</a></li>
+				</ul>
+			</div>
+		</div>
+			<div class="about-heading">
+				<h2 style="color: #ffffff;">个人中心</h2>
+			</div>
+	</div>
+<!-- 头部 -->
+
+<!-- 个人中心 -->
+<div class="me">
+	<div class="meleft">
+		<div class="meleftTitle">用户中心</div>
+		<div class="kuang">
+			<div class="pphoto">
+				<img src="/static/images/sp4.jpg" style="width: 90px; height: 90px;">
+			</div>
+			<div class="user_name">
+		       <p><span class="nc">昵称:</span><span class="name">Cat</span></p>
+		       <p><span class="sj">访问时间：2019-02-21 20:04:36</span></p>
+	       </div>
+  		 </div>
+  		 <div class="daolan">
+  		 	<div class="meleftTitle2"><em class="icon"></em>个人中心</div>
+  		 	<dd style=" padding: 6px 0;font-size: 13px">
+	        	<ul style="    list-style: none;">
+					<li> <a href="/index/user_info/info">个人信息</a></li>
+					<li> <a href="/index/user_info/index">我的订单</a></li>
+					<li> <a href="/index/user_info/address">收货地址</a></li>
+	        	</ul>
+      		</dd>	
+  		 </div>
+	</div>
+<div class="meright">
+	<div class="info_content">
+		<form enctype="multipart/form-data" method="post">
+			<div class="Personal_info" id="Personal">
+				<div class="title_Section"><span>个人信息</span></div>
+				<ul class="xinxi">
+					<li><label>姓名：</label>
+						<span>
+							<input name="name" type="text" value="ccc" class="text" disabled="disabled">
+						</span>
+					</li>
+
+					<li><label>性别：</label> 
+						<span>
+							<input name="sex" type="text" value="男" class="text" disabled="disabled">
+						</span>
+					</li>
+
+					<li><label>邮箱：</label>  
+						<span>
+							<input name="email" type="text" value="patpon@126.com" class="text" disabled="disabled">
+						</span>
+					</li> 
+
+					<li><label>电话：</label>  
+						<span>
+							<input name="tell" type="text" value="13827284899" class="text" disabled="disabled">
+						</span>
+					</li>
+
+					<div class="bottom" style="margin-left: 50px">
+						<a style="width: 120px;height: 40px;display: block;line-height: 40px;margin-right: 20px;margin-top: 20px;background: #F60;color: #FFF;border-radius: 5px;text-align: center;font-size: 16px;float: left;" value="修改信息" href="/index/user_info/changeinfo">修改信息</a>
+					</div>
+				</ul>
+			</div>
+		</form>
+	</div>
+</div>
+</div>
+<!-- 个人中心 -->
+<!-- 购物车 -->
+<section class="cartMain">
+    <form method="post">
+    	<div class="cartMain_title" style="border-bottom: 1px solid #ccc;height: 30px;">
+    	<h7 style="margin-left: 5px;">购物车</h7>
+    	</div>
+        <div class="cartMain_hd">
+            <ul class="">
+                <li >
+                    <!--所有商品全选-->
+                    <input type="checkbox" id="all" class="" checked="">
+                    <label for="all"></label>
+                    全选
+                </li>
+                <li >商品信息</li>
+                <li >单价</li>
+                <li >数量</li>
+                <li >金额</li>
+                <li >操作</li>
+            </ul>
+        </div>
+
+        <div class="cartBox">
+            <div class="order_content">
+                 <ul class="order_lists">
+
+                    <li >
+                        <div class=""><a href=""><img src="/static/images/s4.jpg" style="width: 80px;height: 80px;"></a>
+                        </div>
+                    </li>
+
+                    <li>
+                    	<div style="font-size:15px;"><a href="">沃隆每日坚果</a></div>
+                    </li>
+
+                    <li >
+                        <p class="">￥139</p>
+                    </li>
+
+                    <li >
+                        <div class="">
+                            <a href="" class="">-</a>
+                            <input type="text" value="" class="" name="" style="width: 50px;">
+                            <a href="" class="">+</a>
+                        </div>
+                    </li>
+
+                    <li >
+                        <p class="">￥139</p>
+                    </li>
+
+                    <li >
+                        <p class="">
+                            <a title="删除" href="" onclick="" class="" style="text-decoration:none">移除商品</a>
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!--底部--> 
+        <div class="bar">
+            <ul >
+                <li>已选商品<strong >1</strong>件</li>
+                <li>共计: <strong >￥139</strong></li>
+                <li><a  onclick="">结算</a></li>
+            </ul>
+        </div>
+
+    </form>
+</section>
+<!-- 购物车 -->
+<!-- 底部 -->
+<div class="footer" style="height: 305px; margin-bottom:0px;">
+		<div class="container" style="margin-left: 100px;">
+			<div class="agile-footer-grids">
+				<div class="col-md-3 agile-footer-grid">
+					<h4>关于我们</h4>
+					<p>根据欧美成熟的O2O经营模式，积极调整经营方向，采用直营连锁和特许加盟的发展模式推出“Cake Corner”进行市场扩展。其经营模式打破了传统的品牌、加盟体系和网站经营模式，使中国零食网成为了中国O2O零食专业网站。</span></p>
+				</div>
+				<div class="col-md-3 agile-footer-grid">
+					<h4>联系我们</h4>
+					<ul class="w3agile_footer_grid_list">
+						<li>客服热线：400-400-0404
+						<li>客服邮箱：patpon@126.com</span></li>
+						<li>产品招商合作</li>
+						<li>Email: 296261640@qq.com</li>
+					</ul>
+				</div>
+				<div class="col-md-3 agile-footer-grid" style="margin-left: -70px;">
+					<h4>火爆产品</h4>
+					<div class="popular-grids">
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s1.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s2.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s3.jpg" alt="" /></a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="popular-grids">
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s4.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s5.jpg" alt="" /></a>
+						</div>
+						<div class="popular-grid">
+							<a href="single.html"><img src="/static/images/s6.jpg" alt="" /></a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+
+				<div class="col-md-3 agile-footer-grid">
+					<h4>给我们的建议</h4>
+					<p>如果您有宝贵的意见可以给我提供</p>
+
+					<form action="#" method="post">
+						<input type="text" name="text" placeholder="" required="" style="width: 200px;">
+						<input type="submit" value="提交" style="margin-top: 10px;">
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="agileits-copyright">
+		<div class="container">
+			<p>Copyright © 1995-2019 Cat Corporation, All Rights Reserved</p>
+			<p> 版权所有</p>
+		</div>
+	</div>
+<!-- 底部 -->
+</div>	
+</body>
+</html>
